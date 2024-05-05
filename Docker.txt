@@ -1,0 +1,14 @@
+!!!----------After Docker Installation----------!!!
+-> Install Redis via image by
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+-> Look for Redis image by
+docker ps
+**
+Console:
+CONTAINER ID   IMAGE                      COMMAND            CREATED          STATUS          PORTS                                            NAMES
+55cc51d51df2   redis/redis-stack:latest   "/entrypoint.sh"   31 minutes ago   Up 31 minutes   0.0.0.0:6379->6379/tcp, 0.0.0.0:8001->8001/tcp   redis-stack
+**
+-> Go to image by container ID
+docker exec -it 55cc51d51df2 bash
+-> Go to Redis CLI
+redis-cli
