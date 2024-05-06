@@ -3,6 +3,7 @@ const aixos = require('axios')
 const Redis = require("ioredis");
 const redis = new Redis();
 const app = express()
+
 app.get('/', async (req, res) => {
   const cacheValue = await redis.get('data')
   if(cacheValue) return res.json(JSON.parse(cacheValue))
