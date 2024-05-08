@@ -12,3 +12,5 @@ CONTAINER ID   IMAGE                      COMMAND            CREATED          ST
 docker exec -it 55cc51d51df2 bash
 -> Go to Redis CLI
 redis-cli
+
+Now using external redis via redia offical provider and containerzing with env.
